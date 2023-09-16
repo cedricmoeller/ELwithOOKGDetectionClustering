@@ -1,0 +1,16 @@
+batch_size: 10
+
+num_epochs: 50
+store_every_n_epoch: 5
+evaluate_every_n_epoch: 5
+file_suffix: "tesrtsdsfsd"
+im_kg_path: all_entities_old_dump.jsonl
+training_dataset_path: data/execution_relevant_data/events_trainvaltest.json
+mention_dictionary_file: mention_dictionary_test.json
+use_store_ookg_enttiies: false
+number_candidates: 36
+ookg_probability: 0.0
+lr: 3e-5
+dim: 300
+ranker_hidden_dim: 100
+type_list: decisive_candidates.json

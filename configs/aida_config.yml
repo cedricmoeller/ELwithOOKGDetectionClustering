@@ -1,0 +1,44 @@
+store_every_n_epoch: 1
+evaluate_every_n_epoch: 1
+file_suffix: "tesrtsdsfsd"
+ranker_hidden_dim: 100
+training_dataset_path: /export/home/moeller/ProjectEETests/datasets/aida/aida_train_ookg_art_2019.json
+dev_dataset_path: /export/home/moeller/ProjectEETests/datasets/aida/aida_testa_ookg_art_2019.json
+test_dataset_path: /export/home/moeller/ProjectEETests/datasets/aida/aida_testb_ookg_art_2019.json
+mention_dictionary_file: /data1/moeller/aida_titov/le_titov_mention_mapping_2019.json
+#im_kg_path: /data1/moeller/aida_titov/parsed_dump_2019_onetwohop_filtered_aida_with_degrees_2019.jsonl #filtered_entities_enriched_with_superclasses_aida_letitov_new.jsonl # titov_minimal.jsonl
+im_kg_path: /data1/moeller/aida_titov/parsed_dump_2019_onetwohop_filtered_aida_with_degrees_2019.jsonl
+dim: 300
+ookg_probability: 0.0
+num_epochs: 20
+number_candidates: 30
+gradient_accumulation_size: 1
+batch_size: 4
+adapter_models: True
+add_correct_candidate_during_training: True
+max_length: 512
+include_ookg_score: False
+type_list: /export/home/moeller/ProjectEETests/current_data/decisive_candidates_174_aida_letitov_test.json # refined_types.json
+embedding_comparison_weight: 0.00
+type_embedding_comparison_weight: 0.0
+mention_split: 5
+mentions_to_add_if_full: 5
+transformer_dropout: 0.1
+max_length_description_encoder: 32
+hops: 0
+use_contextual_types: False
+mask_ratio: 1.0
+use_types: True
+alternative_description: null #kelm_description
+use_cosine: True
+use_popularity: False
+lr: 3e-5
+head_lr: 3e-3
+num_weak_negatives: 10
+num_mentions_in_cluster: 1
+num_cluster_candidates: 0
+use_sample_weight: True
+use_transe: False
+transe_embeddings_file: /data1/moeller/transe/wikidata_translation_v1_vectors_filtered.npy
+transe_mappings_file: /data1/moeller/transe/wikidata_translation_mapping.json
+
